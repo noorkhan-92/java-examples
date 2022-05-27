@@ -3,7 +3,9 @@ package examples;
 public class Examples {
 
     public Examples(){
+        long t1 = System.currentTimeMillis();
         System.out.println(flops(1.010, 1.201, 10000000000.0));
+        System.out.println(System.currentTimeMillis() - t1);
     }
     
     private double flops(double a, double b, double i){
@@ -18,7 +20,7 @@ public class Examples {
     }
     
     public static void main(String[] args) {
-        new Examples();
+        Examples examples = new Examples();
     }
     
 }
